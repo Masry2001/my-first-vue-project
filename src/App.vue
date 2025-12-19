@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+
+let message = ref('hello world')
 </script>
 
 <template>
@@ -12,6 +15,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <main>
     <RouterView />
+    <p>{{ message }}</p>
+    <input type="text" v-model="message" />
   </main>
 </template>
 
