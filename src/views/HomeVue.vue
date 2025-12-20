@@ -1,11 +1,14 @@
-<script>
-import flash from '@/mixins/flash'
-export default {
-  mixins: [flash],
-}
+<script setup>
+import { useStorage } from '../composables/useStorage'
+
+const name = useStorage('UserName')
+const age = useStorage('UserAge')
 </script>
 
 <template>
-  <h1>Home</h1>
-  <button @click="flash('Success', 'It Works On the Home Page')">Click me</button>
+  <p>what is your name?</p>
+  <input type="text" v-model="name" />
+
+  <p>what is your age?</p>
+  <input type="number" v-model="age" />
 </template>
