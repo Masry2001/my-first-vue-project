@@ -1,14 +1,11 @@
 <script setup>
-import { useStorage } from '../composables/useStorage'
-
-const name = useStorage('UserName')
-const age = useStorage('UserAge')
+import TabAbleTextarea from '@/components/TabAbleTextarea.vue'
+import { ref } from 'vue'
+let comment = ref('test value')
 </script>
 
 <template>
-  <p>what is your name?</p>
-  <input type="text" v-model="name" />
-
-  <p>what is your age?</p>
-  <input type="number" v-model="age" />
+  <form action="">
+    <TabAbleTextarea style="width: 100%; height: 300px" v-model="comment" />
+  </form>
 </template>
