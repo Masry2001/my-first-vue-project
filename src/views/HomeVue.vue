@@ -1,9 +1,7 @@
 <script setup>
-import { useCounterStore } from '@/stores/CounterStore'
-
-const counter = useCounterStore()
+import TeamView from '@/components/Teams/TeamView.vue'
 </script>
 
 <template>
-  <p>{{ counter.count }}</p>
+  <TeamView />
 </template>
