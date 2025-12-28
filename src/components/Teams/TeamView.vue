@@ -1,20 +1,12 @@
 <script setup>
-import TeamMember from '@/components/Teams/TeamMember.vue'
+import team from '@/components/Teams/team.json'
+import TeamHeader from '@/components/Teams/TeamHeader.vue'
+import TeamMembers from '@/components/Teams/TeamMembers.vue'
+import TeamFooter from '@/components/Teams/TeamFooter.vue'
 </script>
 
 <template>
-  <div class="place-self-center flex flex-col gap-y-3">
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <TeamMember name="Sarah Doe" email="sa@gmail.com" status="Active" />
-      </tbody>
-    </table>
-  </div>
+  <TeamHeader :team="team" />
+  <TeamMembers :team="team" />
+  <TeamFooter :team="team" />
 </template>

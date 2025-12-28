@@ -1,0 +1,36 @@
+{
+  "name": "Smiley",
+  "spots": 5,
+  "members": [
+    {
+      "id": "1",
+      "name": "Sarah Doe",
+      "email": "sarah@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "name": "John Doe",
+      "email": "john@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "name": "Jane Doe",
+      "email": "jane@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "name": "Bob Doe",
+      "email": "bob@gmail.com",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "name": "Alice Doe",
+      "email": "alice@gmail.com",
+      "status": "Active"
+    }
+  ]
+}

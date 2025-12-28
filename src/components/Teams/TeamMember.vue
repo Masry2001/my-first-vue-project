@@ -1,5 +1,6 @@
 <script setup>
 defineProps({
+  id: String,
   name: String,
   email: String,
   status: String,
@@ -7,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <tr class="bg-gray-100 px-12">
+  <tr class="bg-gray-100 px-12 hover:bg-gray-200 cursor-pointer" :key="id">
     <td class="text-xl font-mdedium flex items-center gap-x-4 px-6 py-4">
       <img :src="`https://i.pravatar.cc/50?u=${email}`" alt="image" class="rounded-xl" />
       {{ name }}
