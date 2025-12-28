@@ -1,9 +1,7 @@
 <script setup>
 import TeamMember from '@/components/Teams/TeamMember.vue'
-
-defineProps({
-  team: Object,
-})
+import { useTeamStore } from '@/stores/TeamStore'
+const teamStore = useTeamStore()
 </script>
 <template>
   <div class="place-self-center flex flex-col gap-y-3" style="width: 725px">
@@ -16,17 +14,11 @@ defineProps({
         </tr>
       </thead>
       <tbody>
-        <TeamMember
-          v-for="member in team.members"
-          :key="member.id"
-          :name="member.name"
-          :email="member.email"
-          :status="member.status"
-        />
+        <TeamMember v-for="member in teamStore.members" :key="member.id" :member="member" />
       </tbody>
     </table>
 
-    <p v-if="team.members.length === team.spots" class="text-gray-500 italic text-center">
+    <p v-if="teamStore.isFull" class="text-gray-500 italic text-center">
       There are no remaining team spots. Upgrade to add more
     </p>
   </div>
