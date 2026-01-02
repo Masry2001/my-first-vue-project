@@ -3,5 +3,13 @@ import TeamView from '@/components/Teams/TeamView.vue'
 </script>
 
 <template>
-  <TeamView />
+  <Suspense>
+    <!-- Main content -->
+    <TeamView />
+
+    <!-- Loading state -->
+    <template #fallback>
+      <p>Loading team data...</p>
+    </template>
+  </Suspense>
 </template>

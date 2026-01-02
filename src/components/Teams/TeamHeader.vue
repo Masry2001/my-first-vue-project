@@ -8,6 +8,7 @@ const teamStore = useTeamStore()
       <button
         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed"
         :disabled="teamStore.disabled"
+        @click="$emit('add')"
       >
         Add Member (remainingSpots: {{ teamStore.remaining }})
       </button>
